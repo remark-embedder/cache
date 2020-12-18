@@ -79,6 +79,11 @@ go().then(go).then(go).then(go)
 // your transformers will only be called once even though we call process 4 times.
 ```
 
+The default directory is pretty reasonable:
+`path.join(process.cwd(), 'node_modules/.cache/@remark-embedder/cache')`, but if
+you want to change it, that's the first argument of the `Cache` constructor:
+`new Cache(directory)`.
+
 ## Inspiration
 
 - [`gatsby/src/utils/cache.ts`](https://github.com/gatsbyjs/gatsby/blob/10dfe011c368e28e8de19f0f5569748ebb9a6bc3/packages/gatsby/src/utils/cache.ts)
