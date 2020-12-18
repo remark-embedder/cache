@@ -1,6 +1,9 @@
 {
   "name": "@remark-embedder/cache",
   "version": "0.0.0-semantically-released",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "A cache for @remark-embedder/core",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
