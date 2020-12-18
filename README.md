@@ -1,7 +1,7 @@
 <div align="center">
 <h1>@remark-embedder/cache</h1>
 
-<p>A cache for <a href="https://github.com/react-embedder/core">@remark-embedder/core</a></p>
+<p>A cache for <a href="https://github.com/remark-embedder/core">@remark-embedder/core</a></p>
 </div>
 
 ---
@@ -19,7 +19,7 @@
 
 ## The problem
 
-You're using [`@remark-embedder/core`](https://github.com/react-embedder/core)
+You're using [`@remark-embedder/core`](https://github.com/remark-embedder/core)
 and you want to cache the results of your transformers long-term so you don't
 have to make network requests for HTML every time.
 
