@@ -1,5 +1,6 @@
 import fs from 'fs-extra'
-import Cache from '..'
+
+import Cache from '../'
 
 let cache: Cache | null = null
 

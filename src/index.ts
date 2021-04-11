@@ -1,8 +1,9 @@
 import path from 'path'
-import fs from 'fs-extra'
+
 import cacheManager from 'cache-manager'
 import type {Cache as CMCache, Store} from 'cache-manager'
 import fsStore from 'cache-manager-fs'
+import fs from 'fs-extra'
 
 const TTL = Number.MAX_SAFE_INTEGER
 
@@ -36,11 +37,15 @@ class Cache {
     return new Promise(resolve => {
       this.cache.get(
         key,
-        (err: NodeJS.ErrnoException | undefined, res: string) => {
-          if (err?.code === 'ENOENT') {
+        (
+          error: NodeJS.ErrnoException | undefined,
+          result: string | undefined,
+        ) => {
+          if (error?.code === 'ENOENT') {
             this.ensureCacheDirExists()
           }
-          resolve(err ? undefined : res)
+
+          resolve(error ? undefined : result)
         },
       )
     })
