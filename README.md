@@ -19,15 +19,15 @@
 
 ## The problem
 
-You're using [`@remark-embedder/core`](https://github.com/remark-embedder/core)
-and you want to cache the results of your transformers long-term so you don't
-have to make network requests for HTML every time.
+You're using [`@remark-embedder/core`][@remark-embedder/core] and you want to
+cache the results of your transformers long-term so you don't have to make
+network requests for HTML every time.
 
 ## This solution
 
-This is a cache implementation specifically for `@remark-embedder/core` that
-saves the results of `getHTML` for a transformer to disk (in
-`node_modules/.cache` by default).
+This is a cache implementation specifically for
+[`@remark-embedder/core`][@remark-embedder/core] that saves the results of
+`getHTML` for a transformer to disk (in `node_modules/.cache` by default).
 
 ## Table of Contents
 
@@ -51,13 +51,13 @@ saves the results of `getHTML` for a transformer to disk (in
 This module is distributed via [npm][npm] which is bundled with [node][node] and
 should be installed as one of your project's `dependencies`:
 
-```
+```shell
 npm install @remark-embedder/cache
 ```
 
 ## Usage
 
-```typescript
+```ts
 import Cache from '@remark-embedder/cache'
 
 const cache = new Cache()
@@ -86,7 +86,7 @@ you want to change it, that's the first argument of the `Cache` constructor:
 
 ## Inspiration
 
-- [`gatsby/src/utils/cache.ts`](https://github.com/gatsbyjs/gatsby/blob/10dfe011c368e28e8de19f0f5569748ebb9a6bc3/packages/gatsby/src/utils/cache.ts)
+- [Gatsby's built-in plugin cache][gatsby-plugin-cache-source]
 
 ## Other Solutions
 
@@ -120,13 +120,15 @@ Thanks goes to these people ([emoji key][emojis]):
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://kentcdodds.com"><img src="https://avatars.githubusercontent.com/u/1500684?v=3" width="100px;" alt=""/><br /><sub><b>Kent C. Dodds</b></sub></a><br /><a href="https://github.com/remark-embedder/cache/commits?author=kentcdodds" title="Code">💻</a> <a href="https://github.com/remark-embedder/cache/commits?author=kentcdodds" title="Documentation">📖</a> <a href="#infra-kentcdodds" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/remark-embedder/cache/commits?author=kentcdodds" title="Tests">⚠️</a></td>
-    <td align="center"><a href="https://github.com/andreashouben"><img src="https://avatars3.githubusercontent.com/u/3708288?v=4" width="100px;" alt=""/><br /><sub><b>Andreas Houben</b></sub></a><br /><a href="https://github.com/remark-embedder/cache/commits?author=andreashouben" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://kentcdodds.com"><img src="https://avatars.githubusercontent.com/u/1500684?v=3?s=100" width="100px;" alt=""/><br /><sub><b>Kent C. Dodds</b></sub></a><br /><a href="https://github.com/remark-embedder/cache/commits?author=kentcdodds" title="Code">💻</a> <a href="https://github.com/remark-embedder/cache/commits?author=kentcdodds" title="Documentation">📖</a> <a href="#infra-kentcdodds" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/remark-embedder/cache/commits?author=kentcdodds" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://michaeldeboey.be"><img src="https://avatars3.githubusercontent.com/u/6643991?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michaël De Boey</b></sub></a><br /><a href="https://github.com/remark-embedder/cache/commits?author=MichaelDeBoey" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/andreashouben"><img src="https://avatars3.githubusercontent.com/u/3708288?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andreas Houben</b></sub></a><br /><a href="https://github.com/remark-embedder/cache/commits?author=andreashouben" title="Documentation">📖</a></td>
   </tr>
 </table>
 
-<!-- markdownlint-enable -->
+<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors][all-contributors] specification.
@@ -159,4 +161,7 @@ MIT
 [bugs]: https://github.com/remark-embedder/cache/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3Abug
 [requests]: https://github.com/remark-embedder/cache/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3Aenhancement
 [good-first-issue]: https://github.com/remark-embedder/cache/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3Aenhancement+label%3A%22good+first+issue%22
+
+[@remark-embedder/core]: https://github.com/remark-embedder/core
+[gatsby-plugin-cache-source]: https://github.com/gatsbyjs/gatsby/blob/0a06a795c434312150f30048567b0e2cd797027e/packages/gatsby/src/utils/cache.ts
 <!-- prettier-ignore-end -->
