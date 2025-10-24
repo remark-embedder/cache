@@ -1,7 +1,6 @@
 import path from 'path'
 
-import cacheManager from 'cache-manager'
-import type {Cache as CMCache, Store} from 'cache-manager'
+import cacheManager, {type Cache as CMCache, type Store} from 'cache-manager'
 import fsStore from 'cache-manager-fs'
 import fs from 'fs-extra'
 
